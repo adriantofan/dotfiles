@@ -100,4 +100,15 @@ brew install git-lfs
 # installation method.
 # brew install node
 # Remove outdated versions from the cellar.
+
+brew install caskroom/cask/brew-cask
+
+
+brew cask install iterm2
+brew cask install 1password
+brew cask install skype
+brew tap caskroom/fonts
+brew cask install font-source-code-pro
+
+
 brew cleanup
