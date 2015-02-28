@@ -114,6 +114,8 @@ brew cask install xscope
 brew cask install crashlytics
 # hex color picker
 brew cask install colorpicker-skalacolor
-
+brew cask install diffmerge
+brew cask install skitch
+brew cask install sourcetree
 # Remove outdated versions from the cellar.
 brew cleanup
