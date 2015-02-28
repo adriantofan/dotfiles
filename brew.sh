@@ -23,8 +23,9 @@ sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew install findutils
+# gnu sed breakcs cocoapods
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew install gnu-sed --with-default-names
+# brew install gnu-sed --with-default-names
 # Install Bash 4.
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
@@ -98,7 +99,7 @@ brew install git
 # installation method.
 # brew install node
 
-# Remove outdated versions from the cellar.
+brew install xctool
 
 brew install caskroom/cask/brew-cask
 
@@ -108,6 +109,14 @@ brew cask install 1password
 brew cask install skype
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
+brew cask install flash
+# httpscoop needs licence
+brew cask install httpscoop
+#needs licence
+brew cask install xscope
+brew cask install crashlytics
+# hex color picker
+brew cask install colorpicker-skalacolor
 
-
+# Remove outdated versions from the cellar.
 brew cleanup

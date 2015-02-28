@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # themes 
 
 mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
