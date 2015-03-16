@@ -103,7 +103,7 @@ brew install xctool
 
 brew install caskroom/cask/brew-cask
 
-
+brew install httpie
 brew cask install iterm2
 brew cask install 1password
 brew cask install skype
@@ -116,9 +116,10 @@ brew cask install httpscoop
 brew cask install xscope
 brew cask install crashlytics
 # hex color picker
-brew cask install colorpicker-skalacolor
+brew cask uninstall colorpicker-skalacolor
 brew cask install diffmerge
 brew cask install skitch
 brew cask install sourcetree
+brew cask install colorpicker-propicker
 # Remove outdated versions from the cellar.
 brew cleanup
