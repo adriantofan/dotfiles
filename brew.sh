@@ -112,7 +112,7 @@ brew cask install flash
 brew cask install httpscoop
 #needs licence
 brew cask install xscope
-brew cask install crashlytics
+brew cask install fabric
 # hex color picker
 brew cask uninstall colorpicker-skalacolor
 brew cask install diffmerge
