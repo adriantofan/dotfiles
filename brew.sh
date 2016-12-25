@@ -1,3 +1,4 @@
+
 #!/usr/bin/env bash
 
 # Install command-line tools using Homebrew.
@@ -99,19 +100,12 @@ brew install git-lfs
 
 # Install Node.js. Note: this installs `npm` too, using the recommended
 # installation method.
+
 brew install node
 brew install caskroom/cask/brew-cask
 brew install httpie
-brew cask install iterm2
-brew cask install 1password
-brew cask install skype
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
-brew cask install flash
-# httpscoop needs licence
-brew cask install httpscoop
-#needs licence
-brew cask install xscope
 brew cask install fabric
 # hex color picker
 brew cask uninstall colorpicker-skalacolor
