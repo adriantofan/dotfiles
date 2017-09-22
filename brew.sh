@@ -1,23 +1,17 @@
+
 #!/usr/bin/env bash
 
 # Install command-line tools using Homebrew.
-
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Make sure we’re using the latest Homebrew.
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
-# Install GNU core utilities (those that come with OS X are outdated).
+# Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -32,6 +26,12 @@ brew install findutils
 brew install bash
 brew tap homebrew/versions
 brew install bash-completion2
+
+# Switch to using brew-installed bash as default shell
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+  echo '/usr/local/bin/bash' | sudo tee -a /etc/shells;
+  chsh -s /usr/local/bin/bash;
+fi;
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -84,6 +84,7 @@ brew install ack
 brew install dark-mode
 #brew install exiv2
 brew install git
+brew install git-lfs
 # brew install imagemagick --with-webp
 # brew install lua
 # brew install lynx
@@ -97,31 +98,11 @@ brew install git
 # brew install webkit2png
 # brew install zopfli
 
-# Install Node.js. Note: this installs `npm` too, using the recommended
-# installation method.
-# brew install node
 
 brew install xctool
-
 brew install caskroom/cask/brew-cask
-
 brew install httpie
-brew cask install iterm2
-brew cask install 1password
-brew cask install skype
 brew tap caskroom/fonts
 brew cask install font-source-code-pro
-brew cask install flash
-# httpscoop needs licence
-brew cask install httpscoop
-#needs licence
-brew cask install xscope
-brew cask install fabric
-# hex color picker
-brew cask uninstall colorpicker-skalacolor
-brew cask install diffmerge
-brew cask install skitch
-brew cask install sourcetree
-brew cask install colorpicker-propicker
 # Remove outdated versions from the cellar.
 brew cleanup
